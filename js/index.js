@@ -84,6 +84,34 @@ const displayDataDetails = modal =>{
   
 
 
+  <div class="d-flex gap-4">
+
+  <div>
+  <h1 class="fw-bold">Features<h1>
+  <ul class="fs-5 text">
+  <li>${modal.features[1].feature_name}</li>
+  <li>${modal.features[2].feature_name}</li>
+  <li>${modal.features[3].feature_name}</li>
+  </ul>
+  </div>
+
+
+  <div>
+  <h1 class="fw-bold">Integrations</h1>
+  <ul class="fs-5 text">
+  <li>${modal.integrations[0]}</li>
+  <li>${modal.integrations[1]}</li>
+  <li>${modal.integrations[2]}</li>
+  </ul>
+  </div>
+
+  </div>
+
+  </div>
+
+
+
+
   
 
   </section>
