@@ -65,8 +65,11 @@ const url =`https://openapi.programming-hero.com/api/ai/tool/${id}`
    displayDataDetails(data.data);
 }
 
-const displayDataDetails = card =>{
-  
+const displayDataDetails = modal =>{
+  const modalTitle = document.getElementById('cardDetailModalLabel')
+   modalTitle.innerText = modal.description
+   ;
+
 }
 loadData();
 
