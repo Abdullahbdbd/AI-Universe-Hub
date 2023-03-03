@@ -1,7 +1,7 @@
 const loadData = () => {
    fetch("https://openapi.programming-hero.com/api/ai/tools")
    .then(res => res.json())
-   .then(data => displayData(data.data.tools.slice(0, 6)))
+   .then(data =>displayData(data.data.tools.slice(0, 6)))
 }
 
 const displayData = cards => {
@@ -44,12 +44,16 @@ const showAllCards = () =>{
 
     fetch("https://openapi.programming-hero.com/api/ai/tools")
     .then(res => res.json())
-    .then(data => displayData(data.data.tools))
+    .then(data => {
+        document.getElementById('spinner').classList.add('d-none')
+        displayData(data.data.tools)
+    })
 }
 
 document.getElementById('btn-show-all').addEventListener('click',function(){
     const showAll = document.getElementById('show-all')
     showAll.classList.add('d-none')
+    document.getElementById('spinner').classList.remove('d-none')
 })
 
 
