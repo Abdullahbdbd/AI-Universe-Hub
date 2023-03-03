@@ -67,7 +67,27 @@ const url =`https://openapi.programming-hero.com/api/ai/tool/${id}`
 
 const displayDataDetails = modal =>{
   const modalTitle = document.getElementById('cardDetailModalLabel')
-   modalTitle.innerText = modal.description
+   modalTitle.innerHTML =`
+  <section class="d-flex p-2 rounded-3 gap-3">
+  <div class="fw-bold p-4 bg-danger-subtle border border-dark">
+  <p>${modal.description}</p>
+
+  <div class="d-flex justify-content-around gap-3">
+  <p class="fw-bold p-4 bg-white rounded text-success">${modal.pricing[0].price}</br>
+  ${modal.pricing[0].plan}
+  <p class="fw-bold p-3 bg-white rounded text-primary">${modal.pricing[1].price}</br>
+  ${modal.pricing[1].plan}
+  <p class="fw-bold p-3 bg-white rounded text-danger">${modal.pricing[2].price}</br>
+  ${modal.pricing[2].plan}
+  </p>
+  </div>
+  
+
+
+  
+
+  </section>
+   ` 
    ;
 
 }
