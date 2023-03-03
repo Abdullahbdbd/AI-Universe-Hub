@@ -28,7 +28,7 @@ const displayData = cards => {
                       <p><i class="fa-regular fa-calendar-days"></i> ${card.published_in}</p>
                       </div>
                       <div>
-                      <button class="bg-danger-subtle text-danger p-3 rounded-circle border border-0"><i class="fa-solid fa-arrow-right"></i></button>
+                      <button onclick="singleCardDetails('${card.id}')" class="bg-danger-subtle text-danger p-3 rounded-circle border border-0" data-bs-toggle="modal" data-bs-target="#cardDetailModal"><i class="fa-solid fa-arrow-right"></i></button>
                       </div>
                       </div>
                     </div>
@@ -56,6 +56,19 @@ document.getElementById('btn-show-all').addEventListener('click',function(){
     document.getElementById('spinner').classList.remove('d-none')
 })
 
+const singleCardDetails = async id =>{
+   
+const url =`https://openapi.programming-hero.com/api/ai/tool/${id}`
+    fetch(url)
+   const res = await fetch(url);
+   const data = await res.json();
+   displayDataDetails(data.data);
+}
 
-
+const displayDataDetails = card =>{
+  
+}
 loadData();
+
+
+
