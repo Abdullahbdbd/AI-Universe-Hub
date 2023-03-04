@@ -112,11 +112,17 @@ const displayDataDetails = modal =>{
 
 
 
-  <div class="p-5 border">
-  <img class="img-fluid" src="${modal.image_link[0]}" alt="">
-  <h1>${modal.input_output_examples[0].input}</h1>
-  <p>${modal.input_output_examples[0].output}</p>
-  <button class="bg-danger rounded">${modal.accuracy.score}% Accuracy</button>
+  <div class="border">
+  
+  <div>
+  <img class="img-fluid rounded" src="${modal.image_link[0]}" alt="">
+  <button class="bg-danger rounded position-absolute top-30 end-0 me-4">${modal.accuracy.score*100}% Accuracy</button>
+  </div>
+
+ <div class="ms-4">
+ <h1>${modal.input_output_examples[0].input}</h1>
+ <p>${modal.input_output_examples[0].output}</p>
+ </div>
   </div>
 
   </section>
