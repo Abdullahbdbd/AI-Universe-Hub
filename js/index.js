@@ -11,7 +11,7 @@ const displayData = cards => {
         const cardDiv = document.createElement('div');
         cardDiv.classList.add('col');
         cardDiv.innerHTML = `
-        <div class="card mt-5">
+        <div class="card mt-5 mb-5">
                     <img src="${card.image}" class="card-img-top" alt="...">
                     <div class="card-body">
                       <h5 class="card-title">Features</h5>
@@ -37,7 +37,7 @@ const displayData = cards => {
         dataContainer.appendChild(cardDiv);
     })
 
-   
+  
 }
 
 const showAllCards = () =>{
@@ -68,11 +68,11 @@ const url =`https://openapi.programming-hero.com/api/ai/tool/${id}`
 const displayDataDetails = modal =>{
   const modalTitle = document.getElementById('cardDetailModalLabel')
    modalTitle.innerHTML =`
-  <section class="d-flex p-2 rounded-3 gap-3">
+  <section class="d-lg-flex p-2 rounded-3 gap-3">
   <div class="fw-bold p-4 bg-danger-subtle border border-dark">
   <p>${modal.description}</p>
 
-  <div class="d-flex justify-content-around gap-3">
+  <div class="d-lg-flex justify-content-around gap-3">
   <p class="fw-bold p-4 bg-white rounded text-success">${modal.pricing[0].price}</br>
   ${modal.pricing[0].plan}
   <p class="fw-bold p-3 bg-white rounded text-primary">${modal.pricing[1].price}</br>
@@ -82,8 +82,6 @@ const displayDataDetails = modal =>{
   </p>
   </div>
   
-
-
   <div class="d-flex gap-4">
 
   <div>
@@ -94,7 +92,6 @@ const displayDataDetails = modal =>{
   <li>${modal.features[3].feature_name}</li>
   </ul>
   </div>
-
 
   <div>
   <h1 class="fw-bold">Integrations</h1>
@@ -108,8 +105,6 @@ const displayDataDetails = modal =>{
   </div>
 
   </div>
-
-
 
 
   <div class="border">
